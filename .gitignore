@@ -1,0 +1,8 @@
+assets/**/*
+assets/*
+/protected/runtime/cache/
+/protected/runtime/*.log
+/nbproject
+.DS_Store
+!.gitignore
+/protected/data/config_db.php

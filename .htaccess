@@ -1,0 +1,8 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)\?*$ index.php/$1 [L,QSA]
+RewriteRule .? - [E=X_REST_USERNAME:%{HTTP:X_REST_USERNAME}] 
+RewriteRule .? - [E=X_REST_PASSWORD:%{HTTP:X_REST_PASSWORD}]
+RewriteRule .? - [E=X_REST_TOKEN:%{HTTP:X_REST_TOKEN}]
+
